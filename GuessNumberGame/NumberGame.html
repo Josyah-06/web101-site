@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guess a Number (1–100)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Guess the Number</h1>
+    <p class="subtitle">I’m thinking of a number between <strong>1 and 100</strong>. Can you find it?</p>
+
+    <div class="controls">
+      <input type="text" id="my_input" placeholder="Enter 1–100" inputmode="numeric" aria-label="Your guess" />
+      <div id="my_button" class="btn" role="button" tabindex="0" aria-label="Submit guess">Submit</div>
+    </div>
+
+    <div id="feedback" class="feedback" aria-live="polite"></div>
+    <div class="stats">
+      <span id="guessCount">Guesses: 0</span>
+    </div>
+
+    <div class="history-wrap">
+      <h2>Guess History</h2>
+      <ul id="history" class="history"></ul>
+    </div>
+
+    <div id="winGif" class="win-gif"></div>
+
+    <button id="playAgain" class="btn secondary" hidden>Play Again</button>
+  </main>
+
+  <footer>
+    <small>Tip: You can press <kbd>Enter</kbd> to submit your guess.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wonderful Weather — Today</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-default">
+  <header class="site-head">
+    <h1>Wonderful Weather</h1>
+    <nav class="tabs">
+      <a class="tab active" href="Weather.html" aria-current="page">Today</a>
+      <a class="tab" href="forecast.html">5-Day Forecast</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form id="searchForm" class="search" novalidate>
+      <label for="query" class="visually-hidden">City,Country Code</label>
+      <input id="query" class="input" placeholder="City,Country (e.g., Denver,US)" required />
+      <button class="btn" type="submit">Load Weather</button>
+      <button class="btn ghost" id="useLastBtn" type="button">Use Last</button>
+    </form>
+
+    <section id="todayCard" class="card today" aria-live="polite">
+      <div class="card-header">
+        <h2 id="place">—</h2>
+        <div id="time" class="muted">—</div>
+      </div>
+
+      <div class="today-main">
+        <img id="icon" class="wx-icon" alt="" />
+        <div class="temp-wrap">
+          <div id="temp" class="temp">—</div>
+          <div id="desc" class="desc">—</div>
+        </div>
+      </div>
+
+      <ul class="kv">
+        <li><span>Feels like</span><strong id="feels">—</strong></li>
+        <li><span>High / Low</span><strong id="hiLo">—</strong></li>
+        <li><span>Humidity</span><strong id="humidity">—</strong></li>
+        <li><span>Wind</span><strong id="wind">—</strong></li>
+        <li><span>Sunrise</span><strong id="sunrise">—</strong></li>
+        <li><span>Sunset</span><strong id="sunset">—</strong></li>
+      </ul>
+
+      <div id="alert" class="alert hidden"></div>
+    </section>
+
+    <footer class="note">
+      Tip: Enter <code>City,CountryCode</code> (e.g., <code>Paris,FR</code>). Your last search is saved!
+    </footer>
+  </main>
+
+  <script src="scripts/app.js"></script>
+    <script src="scripts/today.js"></script>
+
+</body>
+</html>

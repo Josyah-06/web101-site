@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wonderful Weather — 5-Day Forecast</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-default">
+  <header class="site-head">
+    <h1>Wonderful Weather</h1>
+    <nav class="tabs">
+      <a class="tab" href="Weather.html">Today</a>
+      <a class="tab active" href="forecast.html" aria-current="page">5-Day Forecast</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form id="searchForm" class="search" novalidate>
+      <label for="query" class="visually-hidden">City,Country Code</label>
+      <input id="query" class="input" placeholder="City,Country (e.g., Denver,US)" required />
+      <button class="btn" type="submit">Load Forecast</button>
+      <button class="btn ghost" id="useLastBtn" type="button">Use Last</button>
+    </form>
+
+    <section id="meta" class="meta muted">—</section>
+    <section id="days" class="grid" aria-live="polite"></section>
+
+    <footer class="note">
+      Icons/images change with weather conditions (☀️, 🌧️, ❄️, ⛈️, etc.).
+    </footer>
+  </main>
+
+  <script src="scripts/app.js"></script>
+
+  <script src="scripts/forecast.js"></script>
+
+</body>
+</html>
