@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Josyah Lunzman — Portfolio – About/Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">Josyah Lunzman — Portfolio</a>
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="skills.html">My Skills</a>
+          <a href="projects.html">My Projects</a>
+          <a href="about.html" aria-current="page">About/Contact</a>
+          <a href="resume.html">Resume</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>About Me</h1>
+    <p>Hello! I’m a student at Neumont College of Computer Science. I enjoy building web apps and learning modern development tools.</p>
+
+    <h2>Contact Me</h2>
+    <form id="contactForm" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" required placeholder="Your name">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" minlength="10" maxlength="1000" required placeholder="Tell me about your project…"></textarea>
+
+      <button type="submit">Send</button>
+      <p id="formStatus" class="muted" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Josyah Lunzman</small>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

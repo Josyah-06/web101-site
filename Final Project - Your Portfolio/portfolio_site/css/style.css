@@ -1,0 +1,53 @@
+:root{
+  --bg:#0B1B2B;
+  --surface:#13253D;
+  --text:#FFFFFF;
+  --accent:#2F80ED;
+  --accent2:#B0BEC5;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0; padding:0}
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  line-height:1.6;
+}
+
+.container{width:min(1000px, 92%); margin-inline:auto}
+
+.site-header{
+  position:sticky; top:0;
+  background:var(--surface);
+  border-bottom:1px solid #2b3056;
+  z-index:10;
+}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:.75rem 0}
+.brand{font-weight:800; color:var(--text); text-decoration:none}
+.links a{color:var(--accent); text-decoration:none; margin-left:1rem}
+.links a:hover{color:var(--accent2)}
+
+.hero{padding:2rem 0 1rem 0}
+.tagline{color:#b8c0ff}
+
+.card{background:#151936; border:1px solid #2b3056; border-radius:12px; padding:1rem; margin:1rem 0}
+
+.slideshow{display:grid; gap:.5rem; justify-items:center}
+.slideshow img{max-width:100%; border-radius:12px; display:block}
+
+.projects{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem}
+
+.skills{columns:2; column-gap:2rem}
+.skills li{break-inside:avoid; margin:.4rem 0}
+
+label{display:block; margin-top:.5rem}
+input, textarea{
+  width:100%; padding:.6rem .7rem; border-radius:10px;
+  border:1px solid #31365f; background:#11153a; color:var(--text);
+}
+button{margin-top:.75rem; padding:.7rem 1rem; border:0; border-radius:999px; background:linear-gradient(135deg,var(--accent),var(--accent2)); color:#001; font-weight:700; cursor:pointer}
+
+.muted{color:#b8c0ff; font-size:.95rem}
+
+.site-footer{border-top:1px solid #2b3056; padding:1rem 0; color:#b8c0ff}
