@@ -1,7 +1,6 @@
-// Year stamp
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Helper for current page highlighting (basic)
+
 (function(){
   const here = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.links a').forEach(a => {
@@ -10,7 +9,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
   });
 })();
 
-// Quote of the Day (tries ZenQuotes, falls back to Quotable or local)
+
 (async function loadQuote(){
   const box = document.getElementById('quote-box');
   const setText = (t) => box && (box.textContent = t);
@@ -41,7 +40,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
   }
 })();
 
-// Slideshow with setInterval
+
 (function(){
   const el = document.getElementById('slide');
   const cap = document.getElementById('slide-caption');
@@ -51,7 +50,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
   {src:'images/weather.png', caption:'Weather Website'},
   {src:'images/about.png', caption:'About Me Page'}
 ];
-  // Preload
+  
   slides.forEach(s => { const i = new Image(); i.src = s.src; });
   let i = 0;
   setInterval(() => {
@@ -61,7 +60,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
   }, 3000);
 })();
 
-// Basic client-side form validation (demo only)
+
 (function(){
   const form = document.getElementById('contactForm');
   if (!form) return;
